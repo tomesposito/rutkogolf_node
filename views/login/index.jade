@@ -1,0 +1,37 @@
+div#loginbox
+    if fail == true
+      p#fail logon failed, please try again.
+    p #{title}
+    form#loginform(method="POST")
+        p 
+          label(for="user") Username:
+          br 
+          input(type="text", id="user", name="user")
+          br
+        p 
+          label(for="pass") Password:
+          br 
+          input(type="password", id="pass", name="pass")
+        p 
+          input(type="submit", value="login", class="submit")
+script
+  $('#fail').fadeIn(1000);
+  $('#user').focus() ;
+  $('#loginform').submit(function(){
+    var i = 0 ;
+    if($('#user').val()==''){
+      $('#user').css('border-color', 'red') ;
+      i++ ;
+    }else{
+      $('#user').css('border-color', '') ;
+    }
+    if($('#pass').val()==''){
+      $('#pass').css('border-color', 'red') ;
+      i++ ;
+    }else{
+      $('#pass').css('border-color', '') ;
+    }
+    if(i>0){
+      return false ;
+    }
+  }) ;

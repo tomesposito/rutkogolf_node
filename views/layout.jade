@@ -1,0 +1,53 @@
+!!! 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/pwi.css')
+    link(rel='stylesheet', href='/javascripts/jquery.slimbox2/jquery.slimbox2.css')
+    script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+    script(type='text/javascript', src='/javascripts/jquery.slimbox2/jquery.slimbox2.js');
+    script(type='text/javascript', src='/javascripts/jquery.blockUI.js');
+    script(type='text/javascript', src='/javascripts/jquery.pwi.js');
+  body
+    h1= title
+    div#loginlink
+      if session.username == null
+        a(href="/login") login
+      else
+        a(href="/user") #{session.fname}
+        span.bar &nbsp|&nbsp
+        a(href="/logout") logout
+    div#nav
+      ul
+       li.first#home
+        a(href='/') home
+       li#about
+        a(href='/about') about
+       li#sponsors
+        a(href='/sponsors') sponsors
+       li#photos
+        a(href='/photos') photos
+       li#contact
+        a(href='/contact') contact
+       li#signup
+        a(href='/signup') sign up!
+       li.last#donate
+        a(href='/donate') donate
+     div#content
+      section!= body
+    script
+      $(document).ready(function(){
+          $('a[href$="'+window.location.pathname+'"]').css('font-weight','700') ;
+          $('li').mouseenter(function(){
+              $(this).width(75)
+                  .css('border-bottom','1px solid #000')
+                  .css('padding-left','25px')
+                  .css('box-shadow','3px 3px 4px #888')
+                  .next().css('border-top','0px');})
+              .mouseleave(function(){$(this).width(69)
+                  .css('border-bottom','')
+                  .css('padding-left','')
+                  .css('box-shadow','')
+                  .next().css('border-top','1px solid #000');}) ;
+       }) ;      

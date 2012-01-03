@@ -1,0 +1,94 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;}
+
+a {
+  color: #00B7FF;}
+
+#loginlink {
+  position: absolute;
+  right: 20px;
+  top: 20px;}
+
+.bar {
+  color: #888;}
+
+#nav {
+  float: left;
+  width: 80px;}
+
+#nav ul {
+  margin-left: 0;
+  padding-left: 0;
+  display: block;}
+
+#nav ul li {
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 2px 5px 5px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  list-style: none;
+  display: block;}
+
+#nav ul li.last {
+  border-bottom: 1px solid #000;}
+
+#content {
+  margin-left: 200px;
+  margin-right: 20%;
+  display: block;}
+
+#post {
+  border: 2px solid #777;
+  padding-bottom: 2px;}
+
+#post div.title {
+  border-bottom: 2px solid #777;
+  padding: 10px;}
+
+#post div.title span.author {
+  right: 25%;
+  position: absolute;}
+
+#post p {
+  padding: 10px;}
+
+#loginbox {
+  border: 1px solid #888;
+  box-shadow: 3px 3px 4px #888;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;}
+
+#loginform {
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;}
+
+#loginform input {
+  float: right;}
+
+#loginform input.submit {
+  background-color: #00B7FF;
+  color: #fff;
+  border-top: 1px solid #ccc;
+  padding: 3px 10px 3px 10px ;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 20px;
+  text-shadow: #888 1px 1px;}
+
+#fail {
+  margin-top: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #de9595;
+  border: 1px dotted #888;
+  padding: 10px;
+  font-size: 8.5pt;
+  display: none;
+  text-align: center;}
